@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UserWindow</class>
+ <widget class="QMainWindow" name="UserWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Пользователь - Партийная работа</string>
+  </property>
+  <property name="styleSheet">
+   <string>QMainWindow {
+    background-color: #ecf0f1;
+}
+QTabWidget::pane {
+    border: 1px solid #bdc3c7;
+    background: white;
+    border-radius: 5px;
+}
+QTabBar::tab {
+    background: #34495e;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+QTabBar::tab:selected {
+    background: #27ae60;
+}
+QPushButton {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background: #2ecc71;
+}
+QPushButton#logoutBtn {
+    background: #95a5a6;
+}
+QTableView {
+    alternate-background-color: #f9f9f9;
+    selection-background-color: #27ae60;
+}
+QHeaderView::section {
+    background: #34495e;
+    color: white;
+    padding: 5px;
+}
+QLabel#photoLabel {
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    background: white;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <widget class="QWidget" name="tabMembers">
+       <attribute name="title">
+        <string>Члены партии</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="filterLayout">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Колонка:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="filterColumn"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Условие:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="filterCondition"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Значение:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="filterValue"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>Сортировка:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="filterSort"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="applyFilterBtn">
+            <property name="text">
+             <string>Применить</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="membersLayout">
+          <item>
+           <widget class="QTableView" name="membersTable">
+            <property name="alternatingRowColors">
+             <bool>true</bool>
+            </property>
+            <property name="selectionBehavior">
+             <enum>QAbstractItemView::SelectRows</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="photoLabel">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>200</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Фото</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabEvents">
+       <attribute name="title">
+        <string>Мероприятия</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QTableView" name="eventsTable"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="buttonsLayoutEvents">
+          <item>
+           <widget class="QPushButton" name="markBtn">
+            <property name="text">
+             <string>Отметить участие</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="horizontalStretch">
+             <number>1</number>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="helpBtn">
+            <property name="text">
+             <string>Справка</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="aboutBtn">
+            <property name="text">
+             <string>О программе</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="logoutBtn">
+            <property name="text">
+             <string>Выйти</string>
+            </property>
+            <property name="objectName">
+             <string>logoutBtn</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabCities">
+       <attribute name="title">
+        <string>Города</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QTableView" name="citiesTable"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabMyLog">
+       <attribute name="title">
+        <string>Мои отметки</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QTableView" name="myLogTable"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <connections>
+ </connections>
+</ui>

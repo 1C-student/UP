@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HelpWindow</class>
+ <widget class="QDialog" name="HelpWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Справка - Партийная работа</string>
+  </property>
+  <property name="styleSheet">
+   <string>QDialog {
+    background: #ecf0f1;
+    font-family: 'Segoe UI';
+}
+QTabWidget::pane {
+    border: 1px solid #bdc3c7;
+    background: white;
+    border-radius: 5px;
+}
+QTabBar::tab {
+    background: #34495e;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+QTabBar::tab:selected {
+    background: #e74c3c;
+}
+QTextBrowser {
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    background: white;
+    padding: 10px;
+    font-size: 11pt;
+}
+QPushButton {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+QPushButton:hover {
+    background: #2980b9;
+}
+QPushButton#closeBtn {
+    background: #95a5a6;
+}
+QPushButton#closeBtn:hover {
+    background: #7f8c8d;
+}
+QPushButton#exportPdfBtn {
+    background: #27ae60;
+}
+QPushButton#exportPdfBtn:hover {
+    background: #2ecc71;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <widget class="QWidget" name="tabAuth">
+      <attribute name="title">
+       <string>Авторизация</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QTextBrowser" name="textAuth">
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;h2&gt;Вход в систему&lt;/h2&gt;
+&lt;p&gt;Для начала работы с программой необходимо авторизоваться.&lt;/p&gt;
+&lt;h3&gt;Порядок действий:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Введите свой &lt;b&gt;логин&lt;/b&gt; в поле &quot;Логин&quot;&lt;/li&gt;
+&lt;li&gt;Введите &lt;b&gt;пароль&lt;/b&gt; в поле &quot;Пароль&quot; (символы отображаются звездочками)&lt;/li&gt;
+&lt;li&gt;Нажмите кнопку &lt;b&gt;&quot;Войти&quot;&lt;/b&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Если у вас нет учетной записи, нажмите кнопку &lt;b&gt;&quot;Регистрация&quot;&lt;/b&gt; для создания нового пользователя.&lt;/p&gt;
+&lt;h3&gt;Регистрация нового пользователя:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;На форме авторизации нажмите &lt;b&gt;&quot;Регистрация&quot;&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;Заполните все поля: логин, пароль, подтверждение пароля, ваше ФИО&lt;/li&gt;
+&lt;li&gt;Пароль должен содержать не менее 4 символов&lt;/li&gt;
+&lt;li&gt;Нажмите &lt;b&gt;&quot;Зарегистрироваться&quot;&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;После успешной регистрации вы будете возвращены на форму авторизации&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;После успешного входа система автоматически определит вашу роль (администратор или пользователь) и откроет соответствующее главное окно.&lt;/p&gt;
+&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabAdmin">
+      <attribute name="title">
+       <string>Администратор</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QTextBrowser" name="textAdmin">
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;h2&gt;Работа в режиме администратора&lt;/h2&gt;
+&lt;p&gt;Администратор имеет полный доступ ко всем функциям системы.&lt;/p&gt;
+
+&lt;h3&gt;1. Управление членами партии (вкладка &quot;Члены партии&quot;)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Добавление:&lt;/b&gt; нажмите кнопку &lt;b&gt;&quot;Добавить&quot;&lt;/b&gt;, заполните форму (ФИО, город, выберите фото), нажмите &quot;Сохранить&quot;&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Редактирование:&lt;/b&gt; выделите строку с нужным членом партии, нажмите &lt;b&gt;&quot;Редактировать&quot;&lt;/b&gt;, измените данные, нажмите &quot;Сохранить&quot;&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Удаление:&lt;/b&gt; выделите строку, нажмите &lt;b&gt;&quot;Удалить&quot;&lt;/b&gt;, подтвердите действие&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Фильтрация:&lt;/b&gt; выберите колонку (ID, ФИО, Город), условие поиска, введите значение, выберите сортировку, нажмите &lt;b&gt;&quot;Применить&quot;&lt;/b&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;2. Управление мероприятиями (вкладка &quot;Мероприятия&quot;)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Добавление:&lt;/b&gt; нажмите &lt;b&gt;&quot;Добавить&quot;&lt;/b&gt; - создается мероприятие с названием &quot;Новое мероприятие&quot; и текущей датой&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Редактирование:&lt;/b&gt; выделите мероприятие, нажмите &lt;b&gt;&quot;Редактировать&quot;&lt;/b&gt;, введите новое название&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Удаление:&lt;/b&gt; выделите мероприятие, нажмите &lt;b&gt;&quot;Удалить&quot;&lt;/b&gt;, подтвердите действие&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;3. Управление городами (вкладка &quot;Города&quot;)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Добавление:&lt;/b&gt; нажмите &lt;b&gt;&quot;Добавить&quot;&lt;/b&gt;, введите название города, нажмите &quot;OK&quot;&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Редактирование:&lt;/b&gt; выделите город, нажмите &lt;b&gt;&quot;Редактировать&quot;&lt;/b&gt;, измените название, нажмите &quot;OK&quot;&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Удаление:&lt;/b&gt; выделите город, нажмите &lt;b&gt;&quot;Удалить&quot;&lt;/b&gt;. Город нельзя удалить, если в нем зарегистрированы члены партии&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;4. Журнал выходов (вкладка &quot;Журнал выходов&quot;)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Добавление:&lt;/b&gt; нажмите &lt;b&gt;&quot;Добавить&quot;&lt;/b&gt;, выберите члена партии, мероприятие и дату, нажмите &quot;OK&quot;&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Редактирование:&lt;/b&gt; выделите запись, нажмите &lt;b&gt;&quot;Редактировать&quot;&lt;/b&gt;, измените данные, нажмите &quot;OK&quot;&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Удаление:&lt;/b&gt; выделите запись, нажмите &lt;b&gt;&quot;Удалить&quot;&lt;/b&gt;, подтвердите действие&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;5. Общие функции&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Справка:&lt;/b&gt; открывает данное окно с инструкцией&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;О программе:&lt;/b&gt; отображает информацию о версии и разработчике&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Выйти:&lt;/b&gt; закрывает текущее окно и возвращает на форму авторизации&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabUser">
+      <attribute name="title">
+       <string>Пользователь</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QTextBrowser" name="textUser">
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;h2&gt;Работа в режиме пользователя&lt;/h2&gt;
+&lt;p&gt;Пользователь имеет ограниченный доступ: только просмотр информации и отметка участия в мероприятиях.&lt;/p&gt;
+
+&lt;h3&gt;1. Просмотр членов партии (вкладка &quot;Члены партии&quot;)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Таблица отображает список всех членов партии с указанием ФИО и города&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Просмотр фото:&lt;/b&gt; нажмите на любую строку в таблице - справа появится фотография выбранного члена партии&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Фильтрация:&lt;/b&gt; выберите колонку (ФИО или Город), условие поиска, введите значение, выберите сортировку, нажмите &lt;b&gt;&quot;Применить&quot;&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;Фильтр можно использовать для поиска членов партии из конкретного города или по фамилии&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;2. Участие в мероприятиях (вкладка &quot;Мероприятия&quot;)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Таблица отображает список всех мероприятий с названием и датой проведения&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Отметка участия:&lt;/b&gt; выделите строку с нужным мероприятием, нажмите кнопку &lt;b&gt;&quot;Отметить участие&quot;&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;Система проверит, не отмечались ли вы уже на это мероприятие - повторная отметка невозможна&lt;/li&gt;
+&lt;li&gt;После успешной отметки появится сообщение об успехе&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;3. Просмотр городов (вкладка &quot;Города&quot;)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Таблица отображает список всех городов, в которых зарегистрированы члены партии&lt;/li&gt;
+&lt;li&gt;Доступен только просмотр - добавление и удаление городов доступно только администратору&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;4. Мои отметки (вкладка &quot;Мои отметки&quot;)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Таблица отображает все мероприятия, на которые вы отметились&lt;/li&gt;
+&lt;li&gt;Показывает дату отметки и название мероприятия&lt;/li&gt;
+&lt;li&gt;Позволяет отслеживать свою активность&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;5. Общие функции&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Справка:&lt;/b&gt; открывает данное окно с инструкцией&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;О программе:&lt;/b&gt; отображает информацию о версии и разработчике&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Выйти:&lt;/b&gt; закрывает текущее окно и возвращает на форму авторизации&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabFilter">
+      <attribute name="title">
+       <string>Фильтрация и поиск</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QTextBrowser" name="textFilter">
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;h2&gt;Фильтрация и поиск данных&lt;/h2&gt;
+&lt;p&gt;На вкладке &lt;b&gt;&quot;Члены партии&quot;&lt;/b&gt; доступна панель фильтрации для удобного поиска нужной информации.&lt;/p&gt;
+
+&lt;h3&gt;Параметры фильтрации:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Колонка:&lt;/b&gt; выбор поля, по которому будет выполняться поиск (ID, ФИО, Город)&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Условие:&lt;/b&gt; тип сравнения (&quot;содержит&quot;, &quot;равно&quot;, &quot;начинается с&quot; для текста; для ID доступны &gt;, &lt;, =)&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Значение:&lt;/b&gt; ввод текста или числа для поиска&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Сортировка:&lt;/b&gt; порядок отображения результатов (по возрастанию или убыванию ID)&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Применить:&lt;/b&gt; кнопка для выполнения фильтрации&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Примеры использования:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Поиск по фамилии:&lt;/b&gt; Колонка = &quot;ФИО&quot;, Условие = &quot;содержит&quot;, Значение = &quot;Владимир&quot; → покажет Путина В.В.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Поиск по городу:&lt;/b&gt; Колонка = &quot;Город&quot;, Условие = &quot;равно&quot;, Значение = &quot;Москва&quot; → покажет всех членов из Москвы&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Поиск по ID:&lt;/b&gt; Колонка = &quot;ID&quot;, Условие = &quot;больше&quot;, Значение = &quot;5&quot; → покажет членов с ID больше 5&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Поиск по началу фамилии:&lt;/b&gt; Колонка = &quot;ФИО&quot;, Условие = &quot;начинается с&quot;, Значение = &quot;М&quot; → покажет членов, чья фамилия начинается на М&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Сброс фильтра:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Чтобы сбросить фильтр, очистите поле &quot;Значение&quot; и нажмите &lt;b&gt;&quot;Применить&quot;&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;Также можно переключиться на другую вкладку и вернуться обратно&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabPhoto">
+      <attribute name="title">
+       <string>Работа с фото</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QTextBrowser" name="textPhoto">
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;h2&gt;Работа с фотографиями&lt;/h2&gt;
+&lt;h3&gt;Добавление фото при создании члена партии:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Нажмите кнопку &lt;b&gt;&quot;Добавить&quot;&lt;/b&gt; на вкладке &quot;Члены партии&quot;&lt;/li&gt;
+&lt;li&gt;В открывшейся форме заполните ФИО и выберите город&lt;/li&gt;
+&lt;li&gt;Нажмите кнопку &lt;b&gt;&quot;Выбрать фото&quot;&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;В проводнике выберите файл изображения (форматы JPG, JPEG, PNG)&lt;/li&gt;
+&lt;li&gt;После выбора фото отобразится предпросмотр&lt;/li&gt;
+&lt;li&gt;Нажмите &lt;b&gt;&quot;Сохранить&quot;&lt;/b&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Изменение фото у существующего члена партии:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Выделите нужную строку в таблице&lt;/li&gt;
+&lt;li&gt;Нажмите &lt;b&gt;&quot;Редактировать&quot;&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;Нажмите &lt;b&gt;&quot;Выбрать фото&quot;&lt;/b&gt; и выберите новое изображение&lt;/li&gt;
+&lt;li&gt;Новое фото заменит старое&lt;/li&gt;
+&lt;li&gt;Нажмите &lt;b&gt;&quot;Сохранить&quot;&lt;/b&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Просмотр фото:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Для пользователя:&lt;/b&gt; нажмите на строку с членом партии - фото отобразится справа&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Для администратора:&lt;/b&gt; при редактировании фото отображается в форме предпросмотра&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Хранение фото:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Фото сохраняются в папку &lt;b&gt;&quot;photos&quot;&lt;/b&gt; в каталоге с программой&lt;/li&gt;
+&lt;li&gt;В базе данных хранится только путь к файлу&lt;/li&gt;
+&lt;li&gt;При удалении члена партии файл фото остается на диске (требуется ручное удаление при необходимости)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item>
+      <widget class="QPushButton" name="exportPdfBtn">
+       <property name="text">
+        <string>Сохранить справку (PDF)</string>
+       </property>
+       <property name="objectName">
+        <string>exportPdfBtn</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="closeBtn">
+       <property name="text">
+        <string>Закрыть</string>
+       </property>
+       <property name="objectName">
+        <string>closeBtn</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <connections>
+  <connection>
+   <sender>closeBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>HelpWindow</receiver>
+   <slot>close()</slot>
+  </connection>
+ </connections>
+</ui>

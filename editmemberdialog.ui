@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EditMemberDialog</class>
+ <widget class="QDialog" name="EditMemberDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Редактирование члена партии</string>
+  </property>
+  <property name="styleSheet">
+   <string>QDialog {
+    background: #ecf0f1;
+    font-family: 'Segoe UI';
+}
+QLabel {
+    color: #2c3e50;
+    font-size: 14px;
+    font-weight: bold;
+}
+QLineEdit, QComboBox {
+    padding: 8px;
+    font-size: 14px;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    background: white;
+}
+QPushButton {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+QPushButton:hover {
+    background: #2980b9;
+}
+QPushButton#cancelBtn {
+    background: #95a5a6;
+}
+QPushButton#cancelBtn:hover {
+    background: #7f8c8d;
+}
+QLabel#photoPreview {
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    background: white;
+    min-width: 150px;
+    min-height: 150px;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelFio">
+       <property name="text">
+        <string>ФИО:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="fioEdit"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="labelCity">
+       <property name="text">
+        <string>Город:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QComboBox" name="cityCombo"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="labelPhoto">
+       <property name="text">
+        <string>Фото:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <layout class="QHBoxLayout" name="photoLayout">
+       <item>
+        <widget class="QPushButton" name="selectPhotoBtn">
+         <property name="text">
+          <string>Выбрать фото</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="photoPathLabel">
+         <property name="text">
+          <string>Файл не выбран</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="3" column="0" colspan="2">
+      <widget class="QLabel" name="photoPreview">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>150</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Предпросмотр</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item>
+      <widget class="QPushButton" name="saveBtn">
+       <property name="text">
+        <string>Сохранить</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelBtn">
+       <property name="text">
+        <string>Отмена</string>
+       </property>
+       <property name="objectName">
+        <string>cancelBtn</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <connections>
+  <connection>
+   <sender>saveBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>EditMemberDialog</receiver>
+   <slot>accept()</slot>
+  </connection>
+  <connection>
+   <sender>cancelBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>EditMemberDialog</receiver>
+   <slot>reject()</slot>
+  </connection>
+ </connections>
+</ui>
